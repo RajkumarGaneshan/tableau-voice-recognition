@@ -34,7 +34,8 @@ if (annyang) {
  	'Select South': function() { selectSouth(); responsiveVoice.speak('selecting South'); },
 	'Select Chennai': function() { selectChennai(); responsiveVoice.speak('selecting Chennai'); },
 	'Select Andhra Pradesh': function() { selectAndhraPradesh(); responsiveVoice.speak('selecting Andhra Pradesh'); },
-	'start over': function() { startover(); responsiveVoice.speak('starting over'); }
+	'start over': function() { startover(); responsiveVoice.speak('starting over'); },
+	'Export': function() { Export(); responsiveVoice.speak('Export'); }
  };
   
   // Add commands to annyang
@@ -100,13 +101,18 @@ function selectAndhraPradesh()
 	}
 	
 	
+	
 //Start Viz Over
 function startover()
 	{
 
 	viz.revertAllAsync();
 	}
+function Export()
+	{
 
+	viz.showExportPDFDialog();
+	}
 </script>
 
 </body>
