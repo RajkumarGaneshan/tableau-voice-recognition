@@ -18,8 +18,8 @@
 </head>	
 
 <body onload=initializeViz();>
-<h1>"Sales Report on Sales order"</h1>
-Say: <i>"Select Net Amount" and "Orders"</i>
+<h1>"MERINO GROUP"</h1>
+Say: <i>"Select Summary View" and "Analysis View" and "OverView" and "Outlet Analysis"</i>
 <br>
 <br>
 <center><div id='tableauViz'></div></center>
@@ -28,10 +28,10 @@ Say: <i>"Select Net Amount" and "Orders"</i>
 if (annyang) {
   // These are the voice commands in quotes followed by the function
   var commands = {
-  	'Select Darth Vader': function() { selectVader(); responsiveVoice.speak('selecting Darth Vader', "UK English Male"); },
- 	'Select Han Solo': function() { selectSolo(); responsiveVoice.speak('selecting Han Solo'); },
- 	'Select Yoda': function() { selectYoda(); responsiveVoice.speak('selecting Yoda', "UK English Female"); },
- 	'Select Luke Skywalker': function() { selectLuke(); responsiveVoice.speak('selecting Luke Skywalker'); },
+  	'Select Summary View': function() { selectSummaryView(); responsiveVoice.speak('selecting Summary View', "UK English Male"); },
+ 	'Select Han Analysis View': function() { selectAnalysisView(); responsiveVoice.speak('selecting Analysis View'); },
+ 	'Select OverView': function() { selectOverView(); responsiveVoice.speak('selecting OverView', "UK English Female"); },
+ 	'Select Outlet Analysis': function() { selectOutletAnalysis(); responsiveVoice.speak('selecting Outlet Analysis'); },
 	'start over': function() { startover(); responsiveVoice.speak('starting over'); }
  };
   
@@ -67,19 +67,24 @@ var options = {
 responsiveVoice.speak('Hi. My name is Tabitha. How may I help you?');
 
 //Make Character selection
-function selectnetamount()
+function selectAnalysisView()
 	{
-	activeSheet.getWorksheets()[1].selectMarksAsync('View by', 'Net Amount', 'REPLACE'); 
+	activeSheet.getWorksheets()[1].selectMarksAsync('View by', 'Analysis View', 'REPLACE'); 
 	}
 
-function selectorder()
+function selectSummaryView()
 	{
-	activeSheet.getWorksheets()[1].selectMarksAsync('Character', '#Order', 'REPLACE'); 
+	activeSheet.getWorksheets()[1].selectMarksAsync('Character', 'Summary View', 'REPLACE'); 
 	}
 
-function selectAov()
+function selectOverview()
 	{
-	activeSheet.getWorksheets()[1].selectMarksAsync('Character', 'AoV', 'REPLACE'); 
+	activeSheet.getWorksheets()[1].selectMarksAsync('Character', 'Overview', 'REPLACE'); 
+	}	
+	
+function selectOutletAnalysis()
+	{
+	activeSheet.getWorksheets()[1].selectMarksAsync('Character', 'Outlet Analysis', 'REPLACE'); 
 	}	
 	
 	
