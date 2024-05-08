@@ -29,7 +29,7 @@ if (annyang) {
   // These are the voice commands in quotes followed by the function
   var commands = {
   	'Select Central': function() { selectCentral(); responsiveVoice.speak('selecting Central', "UK English Male"); },
- 	'Select Han Analysis View': function() { selectAnalysisView(); responsiveVoice.speak('selecting Analysis View'); },
+ 	'Select East': function() { selectEast(); responsiveVoice.speak('selecting East'); },
  	'Select OverView': function() { selectOverView(); responsiveVoice.speak('selecting OverView', "UK English Female"); },
  	'Select Outlet Analysis': function() { selectOutletAnalysis(); responsiveVoice.speak('selecting Outlet Analysis'); },
 	'start over': function() { startover(); responsiveVoice.speak('starting over'); }
@@ -69,12 +69,12 @@ responsiveVoice.speak('Hi. My name is Tabitha. How may I help you?');
 //Make Character selection
 function selectCentral()
 	{
-	activeSheet.getWorksheets()[1].selectMarksAsync('Region', 'Central', 'REPLACE'); 
+	activeSheet.getWorksheets()[1].applyFilterAsync('Region', 'Central', 'REPLACE'); 
 	}
 
-function selectSummaryView()
+function selectEast()
 	{
-	activeSheet.getWorksheets()[1].selectMarksAsync('Character', 'Summary View', 'REPLACE'); 
+	activeSheet.getWorksheets()[1].applyFilterAsync('Region', 'East', 'REPLACE'); 
 	}
 
 function selectOverview()
