@@ -28,7 +28,7 @@ Say: <i>"Select Summary View" and "Analysis View" and "OverView" and "Outlet Ana
 if (annyang) {
   // These are the voice commands in quotes followed by the function
   var commands = {
-  	'Select Summary View': function() { selectSummaryView(); responsiveVoice.speak('selecting Summary View', "UK English Male"); },
+  	'Select Central': function() { selectSummaryCentral(); responsiveVoice.speak('selecting Central', "UK English Male"); },
  	'Select Han Analysis View': function() { selectAnalysisView(); responsiveVoice.speak('selecting Analysis View'); },
  	'Select OverView': function() { selectOverView(); responsiveVoice.speak('selecting OverView', "UK English Female"); },
  	'Select Outlet Analysis': function() { selectOutletAnalysis(); responsiveVoice.speak('selecting Outlet Analysis'); },
@@ -67,9 +67,9 @@ var options = {
 responsiveVoice.speak('Hi. My name is Tabitha. How may I help you?');
 
 //Make Character selection
-function selectAnalysisView()
+function selectCentral()
 	{
-	activeSheet.getWorksheets()[1].selectMarksAsync('View by', 'Analysis View', 'REPLACE'); 
+	activeSheet.getWorksheets()[1].selectMarksAsync('View by', 'Central', 'REPLACE'); 
 	}
 
 function selectSummaryView()
