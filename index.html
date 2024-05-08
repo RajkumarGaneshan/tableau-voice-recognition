@@ -32,7 +32,7 @@ if (annyang) {
  	'Select East': function() { selectEast(); responsiveVoice.speak('selecting East'); },
  	'Select North': function() { selectNorth(); responsiveVoice.speak('selecting North'); },
  	'Select South': function() { selectSouth(); responsiveVoice.speak('selecting South'); },
-	'Select Andra Pradesh': function() { selectAndraPradesh(); responsiveVoice.speak('selecting AndraPradesh'); },
+	'Select Andra Pradesh': function() { selectChennai(); responsiveVoice.speak('selecting Chennai'); },
 	'start over': function() { startover(); responsiveVoice.speak('starting over'); }
  };
   
@@ -88,9 +88,9 @@ function selectSouth()
 	activeSheet.getWorksheets()[1].applyFilterAsync('Region', 'South', 'REPLACE'); 
 	}	
 
-function selectAndraPradesh()
+function selectChennai()
 	{
-	activeSheet.getWorksheets()[1].applyFilterAsync('Branch', 'Andra Pradesh', 'REPLACE'); 
+	activeSheet.getWorksheets()[1].applyFilterAsync('Branch', 'Chennai', 'REPLACE'); 
 	}	
 	
 	
