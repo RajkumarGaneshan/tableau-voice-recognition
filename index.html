@@ -33,7 +33,6 @@ if (annyang) {
  	'Select OverView': function() { selectOverView(); responsiveVoice.speak('selecting OverView', "UK English Female"); },
  	'Select Outlet Analysis': function() { selectOutletAnalysis(); responsiveVoice.speak('selecting Outlet Analysis'); },
 	'start over': function() { startover(); responsiveVoice.speak('starting over'); }
-	'select summary': function() { clickSummaryButton(); responsiveVoice.speak('selecting summary'); }
  };
   
   // Add commands to annyang
@@ -87,10 +86,6 @@ function selectOutletAnalysis()
 	{
 	activeSheet.getWorksheets()[1].selectMarksAsync('Character', 'Outlet Analysis', 'REPLACE'); 
 	}	
-    function clickSummaryButton() {
-      document.getElementById("Summary View").click();
-    }
-
 	
 	
 //Start Viz Over
