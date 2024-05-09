@@ -37,6 +37,9 @@ if (annyang) {
 	'start over': function() { startover(); responsiveVoice.speak('starting over'); },
 	'Navigate to landing page': function() { activateSheetAsync(); responsiveVoice.speak('Taking you to Landing Page'); },
 	'Go to Summary view': function() { activateSheetAsync1(); responsiveVoice.speak('Taking you to Summary View'); },
+	'Go to Analysis view': function() { activateSheetAsync2(); responsiveVoice.speak('Taking you to Analysis View'); },
+	'Go to Overview': function() { activateSheetAsync3(); responsiveVoice.speak('Taking you to  OverView'); },
+	'Go to Outlet Analysis': function() { activateSheetAsync4(); responsiveVoice.speak('Taking you to Outlet Analysis'); },
 	'Export': function() { Export(); responsiveVoice.speak('Export'); }
  };
   
@@ -126,6 +129,18 @@ function activateSheetAsync1()
 	viz.getWorkbook().activateSheetAsync(1);
        }
 
+function activateSheetAsync2()
+       {
+	viz.getWorkbook().activateSheetAsync(2);
+       }
+function activateSheetAsync3()
+       {
+	viz.getWorkbook().activateSheetAsync(5);
+       }
+function activateSheetAsync4()
+       {
+	viz.getWorkbook().activateSheetAsync(6);
+       }
 </script>
 
 </body>
