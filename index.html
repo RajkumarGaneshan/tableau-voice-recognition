@@ -35,6 +35,7 @@ if (annyang) {
 	'Select Chennai': function() { selectChennai(); responsiveVoice.speak('selecting Chennai'); },
 	'Select Andhra Pradesh': function() { selectAndhraPradesh(); responsiveVoice.speak('selecting Andhra Pradesh'); },
 	'start over': function() { startover(); responsiveVoice.speak('starting over'); },
+	'Navigate': function() { navigateAsync(); responsiveVoice.speak('navigating'); },
 	'Export': function() { Export(); responsiveVoice.speak('Export'); }
  };
   
@@ -113,6 +114,12 @@ function Export()
 
 	viz.showExportPDFDialog();
 	}
+
+function activateSheetAsync()
+       {
+	viz.getWorkbook().activateSheetAsync(1);
+       }
+
 </script>
 
 </body>
