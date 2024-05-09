@@ -122,11 +122,15 @@ function Export()
 function activateSheetAsync()
        {
 	viz.getWorkbook().activateSheetAsync(0);
+	workbook.getActiveSheet();
+
        }
 
 function activateSheetAsync1()
        {
 	viz.getWorkbook().activateSheetAsync(1);
+	workbook.getActiveSheet();
+
        }
 
 function activateSheetAsync2()
