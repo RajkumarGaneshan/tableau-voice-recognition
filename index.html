@@ -35,7 +35,7 @@ if (annyang) {
 	'Select Chennai': function() { selectChennai(); responsiveVoice.speak('selecting Chennai'); },
 	'Select Andhra Pradesh': function() { selectAndhraPradesh(); responsiveVoice.speak('selecting Andhra Pradesh'); },
 	'start over': function() { startover(); responsiveVoice.speak('starting over'); },
-	'Navigate': function() { activateSheetAsync(); responsiveVoice.speak('Taking you to Landing Page'); },
+	'Navigate to landing page': function() { activateSheetAsync(); responsiveVoice.speak('Taking you to Landing Page'); },
 	'Export': function() { Export(); responsiveVoice.speak('Export'); }
  };
   
@@ -117,7 +117,7 @@ function Export()
 
 function activateSheetAsync()
        {
-	viz.getWorkbook().activateSheetAsync(1);
+	viz.getWorkbook().activateSheetAsync(2);
        }
 
 </script>
